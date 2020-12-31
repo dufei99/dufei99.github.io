@@ -1,7 +1,6 @@
 # hidden files
 .*
 !.github
-.vscode
 
 # jekyll cache
 _site

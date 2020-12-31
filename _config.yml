@@ -7,39 +7,40 @@
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
-title: dufei99                          # the main title
+title: Chirpy                          # the main title
 
-tagline: 闪电的blog.  # it will display as the sub-title
+tagline: A text-focused Jekyll theme.  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  日常使用的一些记录，
-  就是个笔记吧。
+  A minimal, portfolio, sidebar,
+  bootstrap Jekyll theme with responsive web design
+  and focuses on text presentation.
 
 # fill in the base hostname & protocol for your site, e.g., 'https://username.github.io'
-url: 'dufei99.live'
+url: ''
 
-author: dufei99                  # change to your full name
+author: your_full_name                  # change to your full name
 
 avatar: /assets/img/sample/avatar.jpg   # support internet resources
 
 github:
-  username: dufei99             # change to your github username
+  username: github_username             # change to your github username
 
-#twitter:
-#  username: dufei22del            # change to your twitter username
+twitter:
+  username: twitter_username            # change to your twitter username
 
 social:
-  name: dufei99                  # it will shows as the copyright owner in Footer
-  email: dufei99@live.com            # change to your email address
+  name: your_full_name                  # it will shows as the copyright owner in Footer
+  email: example@doamin.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-#    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/dufei99       # change to your github homepage
+    - https://twitter.com/username      # change to your twitter homepage
+    - https://github.com/username       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-# google_site_verification: google_meta_tag_verification # change to your verification string
+google_site_verification: google_meta_tag_verification # change to your verification string
 # --------------------------
 
 
@@ -137,10 +138,10 @@ defaults:
     values:
       breadcrumb:
         -
-          label: 首页
+          label: Home
           url: /
         -
-          label: 标签
+          label: Tags
           url: /tabs/tags/
   -
     scope:
@@ -148,21 +149,21 @@ defaults:
     values:
       breadcrumb:
         -
-          label: 首页
+          label: Home
           url: /
         -
-          label: 分类
+          label: Categories
           url: /tabs/categories/
   -
     scope:
       path: ''
       type: tabs             # see `site.collections`
     values:
-      layout: 页
+      layout: page
       dynamic_title: true    # Hide title in mobile screens.
       breadcrumb:
         -
-          label: 首页
+          label: Home
           url: /
 
 sass:
@@ -195,4 +196,3 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-
