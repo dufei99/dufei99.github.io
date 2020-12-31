@@ -1,4 +1,8 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# hidden files
+.*
+!.github
+.vscode
+
+# jekyll cache
+_site
+vendor
