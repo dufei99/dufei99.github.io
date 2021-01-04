@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
@@ -8,6 +9,59 @@ title: 码志
 subtitle: "公众号：闷骚的程序员"
 description: "马壮的个人博客，公众号：闷骚的程序员"
 keywords: 码志, Zhuang Ma, mzlogin, mazhuang, 闷骚的程序员
+=======
+# The Site Settings
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2017-2019 Cotes Chung
+# MIT licensed
+
+
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# --------------------------
+title: dufei99                          # the main title
+
+tagline: 一些琐碎的记录.  # it will display as the sub-title
+
+description: >-                        # used by seo meta and the atom feed
+  A minimal, portfolio, sidebar,
+  bootstrap Jekyll theme with responsive web design
+  and focuses on text presentation.
+
+# fill in the base hostname & protocol for your site, e.g., 'https://username.github.io'
+url: 'dufei99.github.io'
+
+author: dufei99                  # change to your full name
+
+avatar: /assets/img/sample/avatar.jpg   # support internet resources
+
+github:
+  username: dufei99             # change to your github username
+
+twitter:
+  username: dufei99            # change to your twitter username
+
+social:
+  name: dufei99                  # it will shows as the copyright owner in Footer
+  email: dufei22@gmail.com             # change to your email address
+  links:
+    # The first element serves as the copyright owner's link
+    - https://twitter.com/username      # change to your twitter homepage
+    - https://github.com/username       # change to your github homepage
+    # Uncomment below to add more social links
+    # - https://www.facebook.com/username
+    # - https://www.linkedin.com/in/username
+
+# google_site_verification: google_meta_tag_verification # change to your verification string
+# --------------------------
+
+
+# Only if your site type is GitHub Project sites and doesn't have a custom domain,
+# change below value to '/projectname'.
+baseurl: 'dufei99.github.io'
+
+# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+>>>>>>> a1600230a9b2ba7c16d99695e9d7965abab4169e
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
@@ -53,9 +107,15 @@ navs:
     href: /
     label: 首页
 
+<<<<<<< HEAD
   -
     href: /categories/
     label: 分类
+=======
+disqus:
+  comments: false  # boolean type, the global switch for posts comments.
+  shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+>>>>>>> a1600230a9b2ba7c16d99695e9d7965abab4169e
 
 #   -
 #     href: /archives/
