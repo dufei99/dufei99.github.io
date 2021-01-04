@@ -1,38 +1,52 @@
 ---
 layout: default
-# The page layout
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2017-2019 Cotes Chung
-# MIT License
 ---
 
-<div class="row">
-  <div class="col-12 col-lg-11 col-xl-8">
-    <div id="page" class="post pb-5 pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 mb-md-4">
-    {% if page.dynamic_title %}
-      <h1 class="dynamic-title">{{ page.title }}</h1>
-      <div class="post-content">
-        {{ content }}
-      </div>
-    {% else %}
-      {{ content }}
-    {% endif %}
-    </div> <!-- #page -->
-  </div><!-- .col-12 -->
-
-  {% include panel.html %}
-
-</div>
-
-{% if site.disqus.comments and page.comments %}
-<div class="row">
-  <div class="col-12 col-lg-11 col-xl-8">
-    <div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
-
-    {% include disqus.html %}
-
-    </div> <!-- .pl-1 pr-1 -->
-  </div> <!-- .col-12 -->
-</div> <!-- .row -->
+{% assign assets_base_url = site.url %}
+{% if site.cdn.jsdelivr.enabled %}
+{% assign assets_base_url = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: '@master' %}
 {% endif %}
+<section class="collection-head small geopattern" data-pattern-id="{{ page.title | truncate: 15}}">
+    <div class="container">
+      <div class="columns">
+        <div class="column two-thirds">
+          <div class="collection-title">
+            <h1 class="collection-header">{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <div class="collection-info">
+              <span class="meta-info">
+                {{ page.subtitle}}
+              </span>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="column one-third mobile-hidden">
+          {% include sidebar-qrcode.html %}
+        </div>
+      </div>
+    </div>
+</section>
+<!-- / .banner -->
+ <section class="container content">
+        <div class="columns">
+            <div class="column two-thirds" >
+                <article class="article-content markdown-body">
+                    {{ content }}
+                </article>
+                <div class="share">
+                    {% include sns-share.html %}
+                </div>
+                <div class="comment">
+                    {% include comments.html %}
+                </div>
+            </div>
+            <div class="column one-third">
+                {% include sidebar-search.html %}
+                {% include sidebar-categories-cloud.html %}
+                {% include sidebar-ad.html %}
+                {% include sidebar-popular-repo.html %}
+            </div>
+        </div>
+    </section>
+    <!-- /section.content -->

@@ -1,183 +1,95 @@
-# Chirpy
+# 码志
 
-Language: English | [简体中文](docs/README.zh-CN.md)
+我的个人博客：<https://mazhuang.org>，欢迎 Star 和 Fork。
 
-[![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?branch=master&event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=branch%3Amaster+event%3Apush)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8220b926db514f13afc3f02b7f884f4b)](https://app.codacy.com/manual/cotes2020/jekyll-theme-chirpy?utm_source=github.com&utm_medium=referral&utm_content=cotes2020/jekyll-theme-chirpy&utm_campaign=Badge_Grade_Dashboard)
-[![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
-[![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
+## 概览
 
-A minimal, sidebar, responsive web design Jekyll theme that focuses on text presentation. Designed to help you record and share your knowledge easily. [Live Demo »](https://chirpy.cotes.info)
+<!-- vim-markdown-toc GFM -->
 
-[![Devices Mockup](https://raw.githubusercontent.com/cotes2020/jekyll-theme-chirpy/master/assets/img/sample/devices-mockup.png)](https://chirpy.cotes.info)
+* [效果预览](#效果预览)
+* [Fork 指南](#fork-指南)
+* [使用文档](#使用文档)
+* [经验与思考](#经验与思考)
+* [联系我](#联系我)
+* [致谢](#致谢)
 
-## Table of Contents
+<!-- vim-markdown-toc -->
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Credits](#credits)
-- [Supporting](#supporting)
-- [License](#license)
+## 效果预览
 
-## Features
+**[在线预览 &rarr;](https://mazhuang.org)**
 
-- Pinned Posts
-- Configurable theme mode
-- Double-level Categories
-- Last modified date for posts
-- Table of Contents
-- Automatically recommend related posts
-- Syntax highlighting
-- Mathematical expressions
-- Mermaid diagram & flowchart
-- Search
-- Atom Feeds
-- Disqus Comments
-- Google Analytics
-- GA Pageviews reporting (Advanced)
-- SEO and Performance Optimization
+![screenshot home](https://mazhuang.org/assets/images/screenshots/home.png)
 
-## Installation
+## Fork 指南
 
-[Fork **Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork) on GitHub, rename the repository to `USERNAME.github.io` (where `USERNAME` is your GitHub username), and then open terminal and clone the fork to local by:
+Fork 本项目之后，还需要做一些事情才能让你的页面「正确」跑起来。
 
-```terminal
-$ git clone https://github.com/USERNAME/USERNAME.github.io.git -b master --single-branch
-```
+1. 正确设置项目名称与分支。
 
-### Setting up the local envrionment
+   按照 GitHub Pages 的规定，名称为 `username.github.io` 的项目的 master 分支，或者其它名称的项目的 gh-pages 分支可以自动生成 GitHub Pages 页面。
 
-If you would like to run or build the project on your local machine, please follow the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems`, `Jekyll` and `Bundler`.
+2. 修改域名。
 
-Before running or building for the first time, please complete the installation of the Jekyll plugins. Go to the root directory of project and run:
+   如果你需要绑定自己的域名，那么修改 CNAME 文件的内容；如果不需要绑定自己的域名，那么删掉 CNAME 文件。
 
-```terminal
-$ bundle install
-```
+3. 修改配置。
 
-`bundle` will automatically install all the dependencies specified by `Gemfile`.
+   网站的配置基本都集中在 \_config.yml 文件中，将其中与个人信息相关的部分替换成你自己的，比如网站的 url、title、subtitle 和第三方评论模块的配置等。
 
-### Setting up Docker environment (optional)
+   **评论模块：** 目前支持 disqus、gitment 和 gitalk，选用其中一种就可以了，推荐使用 gitalk。它们各自的配置指南链接在 \_config.yml 文件的 Comments 一节里都贴出来了。
 
-If you're a loyal fan of [**Docker**](https://www.docker.com/) or just too lazy to install the packages mentioned in [_Setting up the local envrionment_](#setting-up-the-local-envrionment), please make sure you have **Docker Engine** installed and running, and then get Docker image `jekyll/jekyll` from Docker Hub by the following command:
+   **注意：** 如果使用 disqus，因为 disqus 处理用户名与域名白名单的策略存在缺陷，请一定将 disqus.username 修改成你自己的，否则请将该字段留空。我对该缺陷的记录见 [Issues#2][3]。
 
-```console
-$ docker pull jekyll/jekyll
-```
+4. 删除我的文章与图片。
 
-## Usage
+   如下文件夹中除了 template.md 文件外，都可以全部删除，然后添加你自己的内容。
 
-### Initialization
+   * \_posts 文件夹中是我已发布的博客文章。
+   * \_drafts 文件夹中是我尚未发布的博客文章。
+   * \_wiki 文件夹中是我已发布的 wiki 页面。
+   * images 文件夹中是我的文章和页面里使用的图片。
 
-Go to the root directory of the project and start initialization:
+5. 修改「关于」页面。
 
-```console
-$ bash tools/init.sh
-```
+   pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。
 
-> **Note**: If you not intend to deploy it on GitHub Pages, append parameter option `--no-gh` at the end of the above command.
+## 使用文档
 
-What it does is:
+- [本博客模板常见问题 Q & A](https://mazhuang.org/2020/05/03/blog-template-qna/)。
 
-1. Remove some files or directories from your repository:
+- 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
 
-    - `.travis.yml`
-    - files under `_posts`
-    - folder `docs`
+## 经验与思考
 
-2. If you use the `--no-gh` option, the directory `.github` will be deleted. Otherwise, setup the GitHub Action workflow by removing extension `.hook` of `.github/workflows/pages-deploy.yml.hook`, and then remove the other files and directories in folder `.github`.
+* 排版建议遵照一定的规范，推荐 [中文文案排版指北（简体中文版）][1]。
 
-3. Automatically create a commit to save the changes.
+* 简约，尽量每个页面都不展示多余的内容。
 
-### Configuration
+* 有时一图抵千言，有时可能只会拖慢网页加载速度。
 
-Generally, go to `_config.yml` and configure the variables as needed. Some of them are typical options:
+* 言之有物，不做无痛之呻吟。
 
-- `url`
-- `avatar`
-- `timezone`
-- `theme_mode`
+* 如果写技术文章，那先将技术原理完全理清了再开始写，一边摸索技术一边组织文章效率较低。
 
-### Run Locally
+* 杜绝难断句、难理解的长句子，如果不能将其拆分成几个简洁的短句，说明脑中的理解并不清晰。
 
-You may want to preview the site contents before publishing, so just run it by:
+* 可以学习一下那些高质量的博主，他们的行文，内容组织方式，有什么值得借鉴的地方。
 
-```terminal
-$ bundle exec jekyll s
-```
+## 联系我
 
-Then open a browser and visit to <http://localhost:4000>.
+如果对本博客模板或者内容有任何建议，可以通过 [Issues](https://github.com/mzlogin/mzlogin.github.io/issues) 或者微信公众号「闷骚的程序员」与我取得联系。
 
-### Run on Docker
+<img width="192px" height="192px" src="https://mazhuang.org/assets/images/qrcode.jpg"/>
 
-Run the site on Docker with the following command:
+## 致谢
 
-```terminal
-$ docker run -it --rm \
-    --volume="$PWD:/srv/jekyll" \
-    -p 4000:4000 jekyll/jekyll \
-    jekyll serve
-```
+本博客外观基于 [DONGChuan](https://dongchuan.github.io) 修改，感谢！
 
-### Deployment
+Thanks for JetBrains' support.
 
-Before the deployment begins, checkout the file `_config.yml` and make sure the `url` is configured correctly. Furthermore, if you prefer the [_project site_](https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites) and don't use a custom domain, or you want to visit your website with a base url on a web server other than **GitHub Pages**, remember to change the `baseurl` to your project name that starting with a slash. For example, `/project`.
+<a href="https://www.jetbrains.com/?from=mzlogin.github.io"><img src="./assets/images/jetbrains.svg"/></a>
 
-Assuming you have already gone through the [initialization](#initialization), you can now choose ONE of the following methods to deploy your website.
-
-#### Deploy on GitHub Pages
-
-For security reasons, GitHub Pages build runs on `safe` mode, which restricts us from using plugins to generate additional page files. Therefore, we can use **GitHub Actions** to build the site, store the built site files on a new branch, and use that branch as the source of the Pages service.
-
-1. Push any commit to `origin/master` to trigger the GitHub Actions workflow. Once the build is complete and successful, a new remote branch named `gh-pages` will appear to store the built site files.
-
-2. Browse to your repo's landing page on GitHub and select the branch `gh-pages` as the [publishing source](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) throught _Settings_ → _Options_ → _GitHub Pages_:
-    ![gh-pages-sources](https://raw.githubusercontent.com/cotes2020/jekyll-theme-chirpy/master/assets/img/sample/gh-pages-sources.png)
-
-3. Visit your website at the address indicated by GitHub.
-
-#### Deploy on Other Platforms
-
-On platforms other than GitHub, we cannot enjoy the convenience of **GitHub Actions**. Therefore, we should build the site locally (or on some other 3rd-party CI platform) and then put the site files on the server.
-
-Go to the root of the source project, build your site by:
-
-```console
-$ JEKYLL_ENV=production bundle exec jekyll b
-```
-
-Or, build the site with Docker by:
-
-```terminal
-$ docker run -it --rm \
-    --env JEKYLL_ENV=production \
-    --volume="$PWD:/srv/jekyll" \
-    jekyll/jekyll \
-    jekyll build
-```
-
-Unless you specified the output path, the generated site files will be placed in folder `_site` of the project's root directory. Now you should upload those files to your web server.
-
-### Documentation
-
-For more details and the better reading experience, please check out the [tutorials on demo site](https://chirpy.cotes.info/categories/tutorial/). In the meanwhile, a copy of the tutorial is also available on the [Wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
-
-## Contributing
-
-The old saying, "Two heads are better than one." Consequently, welcome to report bugs, improve code quality or submit a new feature. For more information, see [contributing guidelines](.github/CONTRIBUTING.md).
-
-## Credits
-
-This theme is mainly built with [Jekyll](https://jekyllrb.com/) ecosystem, [Bootstrap](https://getbootstrap.com/), [Font Awesome](https://fontawesome.com/) and some other wonderful tools (their copyright information can be found in the relevant files).
-
-:tada: Thanks to all the volunteers who contributed to this project, their GitHub IDs are on [this list](https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors). Also, I won't forget those guys who submitted the issues or unmerged PR because they reported bugs, shared ideas or inspired me to write more readable documentation.
-
-## Supporting
-
-If you enjoy this theme or find it helpful, please consider becoming my sponsor, I'd really appreciate it! Click the button <kbd>:heart: Sponsor</kbd> at the top of the [Home Page](https://github.com/cotes2020/jekyll-theme-chirpy) and choose a link that suits you to donate; this will encourage and help me better maintain the project.
-
-## License
-
-This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE) License.
+[1]: https://github.com/mzlogin/chinese-copywriting-guidelines
+[2]: https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/
+[3]: https://github.com/mzlogin/mzlogin.github.io/issues/2

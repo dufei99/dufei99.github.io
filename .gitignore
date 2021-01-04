@@ -1,7 +1,9 @@
-# hidden files
-.*
-!.github
-
-# jekyll cache
-_site
-vendor
+_site/
+*.sw[po]
+*.~vsd
+\#*\#
+*~
+.DS_Store
+Gemfile.lock
+.vscode/
+.jekyll-metadata
