@@ -19,17 +19,17 @@ baseurl:
 permalink: pretty
 
 # Pagination
-paginate: 10
-#paginate_path: "/page:num/"
-#archive:
-  #paginate: 10
-  #paginate_path: "/page:num/"
-#category:
-  #paginate: 10
-  #paginate_path: "/page:num/"
-#tag:
-  #paginate: 10
-  #paginate_path: "/page:num/"
+paginate: 20
+paginate_path: "/page:num/"
+archive:
+  paginate: 20
+  paginate_path: "/page:num/"
+category:
+  paginate: 20
+  paginate_path: "/page:num/"
+tag:
+  paginate: 20
+  paginate_path: "/page:num/"
 
 # Handling Reading
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile", "Gemfile.lock", "README_en.md", "vendor"]
@@ -605,7 +605,7 @@ exturl: false
 #! ---------------------------------------------------------------
 
 # Motion
-use_motion: true
+use_motion: false
 
 # Fancybox
 fancybox: true
