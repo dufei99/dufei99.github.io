@@ -5,7 +5,7 @@ category: 技术/git
 tags: [git,GitHub]
 ---
 
-# git 出现 everything up-to-date解决方法
+git 出现 everything up-to-date解决方法
 
 #### 现象
 
