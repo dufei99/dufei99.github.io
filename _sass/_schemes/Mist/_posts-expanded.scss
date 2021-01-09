@@ -10,12 +10,13 @@
   }
   .post-eof { display: none; }
 
-  .post { margin-top: 40px; }
+  .post { margin-top: 40px;}
   .post:first-child { margin-top: 0; }
 
   .post-meta {
     margin-top: 0px;
     margin-bottom: 0px;
+    padding-left: 2rem;
   }
 
   .post-title {
@@ -33,6 +34,8 @@
 
   .post-body img { margin: 0; }
 
+  .post-body {margin-left: 2rem;}
+  
   .post-tags {
     text-align: left;
     a {
