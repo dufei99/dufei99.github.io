@@ -1,7 +1,7 @@
 ---
 title: git学习网址
 date: 2020-12-19
-categories: 
+category: 
  - 技术/git 
 tags:
  - git
