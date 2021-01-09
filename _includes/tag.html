@@ -1,9 +1,9 @@
 <div id="posts" class="posts-collapse" hidden>
   <div class="collection-title">
-    <{% if site.seo %}h2{% else %}h1{% endif %}>
+    <{% if site.seo %}div{% else %}div{% endif %}>
     {{ page.tag }}
     <small>{{  __.title.tag  }}</small>
-    </{% if site.seo %}h2{% else %}h1{% endif %}>
+    </{% if site.seo %}div{% else %}div{% endif %}>
   </div>
 
   {% assign paginate = site.tag.paginate | default: site.paginate  %}
