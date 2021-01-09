@@ -10,7 +10,7 @@
   }
   .post-eof { display: none; }
 
-  .post { margin-top: 60px; }
+  .post { margin-top: 40px; }
   .post:first-child { margin-top: 0; }
 
   .post-meta {
@@ -28,6 +28,8 @@
   .post-title:hover:before { background: $black-deep; }
   
   h1.post-title{margin-top:10px;margin-bottom:0px;}
+
+  .post-body ul {margin-top:0;}
 
   .post-body img { margin: 0; }
 
