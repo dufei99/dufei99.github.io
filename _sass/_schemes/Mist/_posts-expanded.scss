@@ -16,7 +16,7 @@
   .post-meta {
     margin-top: 0px;
     margin-bottom: 0px;
-    @include desktop-large() {padding-left: 2rem;}
+    @include desktop() {padding-left: 2rem;}
   }
 
   .post-title {
@@ -35,7 +35,7 @@
   .post-body img { margin: 0; }
 
   .post-body {
-    @include desktop-large() {margin-left: 2rem;}
+    @include desktop() {margin-left: 2rem;}
   }
   
   .post-tags {
