@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-headings;
 }
 
-h2, h3, h4, h5, h6 { margin: 20px 0 15px; }
+h2, h3, h4, h5, h6 { margin: 15px 0 10px; }
 
 @for $headline from 1 through 6 {
   h#{$headline} {
@@ -39,7 +39,7 @@ h2, h3, h4, h5, h6 { margin: 20px 0 15px; }
   }
 }
 
-p { margin: 0 0 25px 0; }
+p { margin: 0 0 1rem 0; }
 
 a {
   color: $link-color;
@@ -67,7 +67,7 @@ img {
 
 
 hr {
-  margin: 40px 0;
+  margin: 1.5rem 0;
   height: 3px;
   border: none;
   background-color: $gray-lighter;
