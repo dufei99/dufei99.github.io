@@ -1,11 +1,8 @@
 ---
 title: git学习网址
 date: 2020-12-19
-category: 
- - 技术/git 
-tags:
- - git
- - GitHub
+category: 技术/git 
+tags: [git,GitHub]
 ---
 
 # git 出现 everything up-to-date解决方法
