@@ -16,7 +16,7 @@
   .post-meta {
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-left: 2rem;
+    @include desktop-large() {padding-left: 2rem;}
   }
 
   .post-title {
@@ -34,7 +34,9 @@
 
   .post-body img { margin: 0; }
 
-  .post-body {margin-left: 2rem;}
+  .post-body {
+    @include desktop-large() {margin-left: 2rem;}
+  }
   
   .post-tags {
     text-align: left;
