@@ -14,8 +14,8 @@
   .post:first-child { margin-top: 0; }
 
   .post-meta {
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .post-title {
@@ -26,6 +26,8 @@
     @include desktop-large() { font-size: $font-size-headings-large; }
   }
   .post-title:hover:before { background: $black-deep; }
+  
+  h1.post-title{margin-top:10px;margin-bottom:0px;}
 
   .post-body img { margin: 0; }
 
